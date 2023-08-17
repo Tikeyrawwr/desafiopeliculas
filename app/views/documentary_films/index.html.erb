@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Documentales</h1>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Sinopsis</th>
+        <th>Director</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @documentary_films.each do |documentary| %>
+        <tr>
+          <td><%= documentary.name %></td>
+          <td><%= documentary.synopsis %></td>
+          <td><%= documentary.director %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <%= link_to 'Nuevo Documental', new_documentary_film_path, class: 'btn btn-primary' %>
+</div>
